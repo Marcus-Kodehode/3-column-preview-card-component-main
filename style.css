@@ -9,24 +9,32 @@
 
 /* Container som holder alle kortene */
 .container {
-    display: grid; /* Bruker CSS Grid for layout */
-    grid-template-columns: repeat(3, 1fr); /* Lager tre kolonner som deler plassen likt */
-    gap: 20px; /* Legger til avstand mellom kolonnene */
-    max-width: 1440px; /* Maksimal bredde på containeren */
-    margin: 0 auto; /* Sentrerer containeren horisontalt */
+    display: grid;
+    grid-template-columns: repeat(3, 250px); /* Gjør hvert kort smalere med fast bredde */
+    gap: 0; /* Fjerner mellomrommet mellom kortene */
+    max-width: 1440px;
+    margin: 0 auto; /* Sentrerer containeren på skjermen */
+    padding: 20px;
+    justify-content: center; /* Sentrerer kortene horisontalt i containeren */
 }
-
 /* Styling for kortene */
 .card {
-    padding: 30px; /* Gir kortene innvendig avstand */
+    padding: 20px; /* Gir kortene innvendig avstand */
     text-align: center; /* Sentrerer innholdet horisontalt */
-    border-radius: 10px; /* Runder hjørnene på kortene */
+    border-radius: 0px; /* Runder hjørnene på kortene */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Legger til en svak skygge rundt kortene */
     color: white; /* Setter tekstfargen på kortene til hvit */
-    min-height: 400px; /* Gjør kortene lengre i høyden */
-    display: flex; /* Bruker Flexbox for å ordne innhold vertikalt */
-    flex-direction: column; /* Stabler innholdet vertikalt */
-    justify-content: space-between; /* Fordeler plassen mellom innholdet og knappen */
+    min-height: 350px; /* Gjør kortene litt mindre i høyden */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+/* Justerer avstanden mellom bilde og overskrift på kortene */
+.card img {
+    width: 50px; /* Setter bredden på bildene til 50px */
+    margin-bottom: 15px; /* Reduserer avstand under bildene */
 }
 
 /* Spesifik styling for Sedans kortet */
@@ -59,49 +67,44 @@
     color: var(--very-dark-cyan); /* Knappens tekstfarge matcher bakgrunnsfargen til kortet */
 }
 
-/* Bilde på kortene (størrelse og avstand) */
-.card img {
-    width: 50px; /* Setter bredden på bildene til 50px */
-    margin-bottom: 20px; /* Legger til avstand under bildene */
-}
-
 /* Styling for overskriftene på kortene */
 .card h3 {
     font-family: 'Big Shoulders Display', sans-serif; /* Setter skrifttypen for overskriftene */
     font-size: 1.5rem; /* Setter skriftstørrelsen */
-    margin-bottom: 15px; /* Legger til litt plass under overskriftene */
+    margin-bottom: 10px; /* Justerer avstanden mellom overskriften og teksten */
 }
 
-/* Styling for beskrivelsesteksten på kortene */
+/* Justerer linjeavstand for å fylle mer plass i kortene */
 .card p {
-    color: var(--transparent-white); /* Bruker den hvite transparente fargen for teksten */
-    margin-bottom: 20px; /* Legger til plass under beskrivelsen */
+    color: var(--transparent-white);
+    margin-bottom: 20px;
+    line-height: 1.8; /* Øker linjehøyden for at teksten skal fylle mer plass */
+    font-size: 15px; /* Holder font-størrelsen uendret */
 }
 
 /* Styling for knappene på kortene */
 .card button {
     background-color: white; /* Setter bakgrunnsfargen på knappen til hvit */
-    padding: 10px 20px; /* Legger til litt plass rundt teksten i knappen */
-    border-radius: 5px; /* Runder hjørnene på knappen */
+    padding: 8px 15px; /* Reduserer størrelsen på knappene */
+    border-radius: 25px; /* Runder hjørnene på knappen */
     cursor: pointer; /* Setter musen til å bli en hånd når du hover over knappen */
     border: none; /* Fjerner kantlinjen på knappen */
     font-weight: 700; /* Setter skrifttypen til fet */
     transition: background-color 0.3s ease, color 0.3s ease; /* Legger til en jevn overgang på bakgrunns- og tekstfargen */
     margin-top: auto; /* Plasserer knappen nederst på kortet */
+    align-self: flex-start; /* Justerer knappen til venstre */
 }
 
 /* Hover-effekt for knappene */
 .card button:hover {
     background-color: hsl(0, 0%, 100%); /* Bakgrunnsfargen på knappen endres når du hover */
-    color: hsl(179, 100%, 13%); /* Tekstfargen endres på hover */
+    color: hsl(31, 77%, 52%); /* Tekstfargen endres på hover */
 }
-
-/* Media queries for responsiv design (mobilvennlig) */
 
 /* Når skjermen er 768px eller mindre, vis 2 kolonner */
 @media (max-width: 768px) {
     .container {
-        grid-template-columns: repeat(2, 1fr); /* Justerer layouten til to kolonner */
+        grid-template-columns: repeat(2, 250px); /* Endrer til to kolonner på mellomstore skjermer */
     }
 }
 
@@ -111,4 +114,7 @@
         grid-template-columns: 1fr; /* Endrer layouten til én kolonne */
     }
 }
+
+
+
 
