@@ -1,44 +1,78 @@
 <!DOCTYPE html>
-<html lang="en"> <!-- Definerer språk som engelsk -->
-<head>
-    <meta charset="UTF-8"> <!-- Angir tegnkoding (UTF-8) for riktig visning av tegn -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsiv design for å tilpasse siden til skjermstørrelse -->
-    <title>3-Column Preview Card</title> <!-- Tittel på siden som vises i nettleserens tittelboks -->
-    
-    <!-- Importerer fonter fra Google Fonts: 'Lexend Deca' (normal tekst) og 'Big Shoulders Display' (overskrifter) -->
-    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400&family=Big+Shoulders+Display:wght@700&display=swap" rel="stylesheet">
-    
+<html lang="en">
+  <!-- Definerer språk som engelsk -->
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Angir tegnkoding (UTF-8) for riktig visning av tegn -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Responsiv design for å tilpasse siden til skjermstørrelse -->
+    <title>3-Column Preview Card</title>
+    <!-- Tittel på siden som vises i nettleserens tittelboks -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Lexend+Deca:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- Kobler til den eksterne CSS-filen som inneholder styling for komponenten -->
-    <link href="style.css" rel="stylesheet" >
-</head>
-<body> <!-- Start på body, alt innhold på nettsiden vil være her -->
-    <div class="container"> <!-- Container som holder alle kortene (boksene) i en grid-layout -->
-        
-        <!-- Sedans Card -->
-        <div class="card sedans"> <!-- Spesifikt kort for "Sedans" med sin egen styling -->
-            <img src="img/icon-sedans.svg" alt="Sedans"> <!-- Bilde for Sedans (ikonet) -->
-            <h3>Sedans</h3> <!-- Overskrift for kortet -->
-            <p>Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city or on your next road trip.</p> <!-- Beskrivelse av Sedans -->
-            <button>Learn More</button> <!-- Knapp som gir brukeren mulighet til å lære mer -->
-        </div>
-        
-        <!-- SUVs Card -->
-        <div class="card suvs"> <!-- Spesifikt kort for "SUVs" med sin egen styling -->
-            <img src="img/icon-suvs.svg" alt="SUVs"> <!-- Bilde for SUVs (ikonet) -->
-            <h3>SUVs</h3> <!-- Overskrift for kortet -->
-            <p>Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation and off-road adventures.</p> <!-- Beskrivelse av SUVs -->
-            <button>Learn More</button> <!-- Knapp som gir brukeren mulighet til å lære mer -->
-        </div>
-        
-        <!-- Luxury Card -->
-        <div class="card luxury"> <!-- Spesifikt kort for "Luxury" med sin egen styling -->
-            <img src="img/icon-luxury.svg" alt="Luxury"> <!-- Bilde for Luxury (ikonet) -->
-            <h3>Luxury</h3> <!-- Overskrift for kortet -->
-            <p>Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury rental and drive in style.</p> <!-- Beskrivelse av Luxury -->
-            <button>Learn More</button> <!-- Knapp som gir brukeren mulighet til å lære mer -->
-        </div>
-    </div> <!-- Slutt på containeren -->
-</body> <!-- Slutt på body -->
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Start på body, alt innhold på nettsiden vil være her -->
+    <div class="container">
+      <!-- Container som holder alle kortene (boksene) i en grid-layout -->
+
+      <!-- Sedans Card -->
+      <div class="card sedans">
+        <!-- Spesifikt kort for "Sedans" med sin egen styling -->
+        <img src="img/icon-sedans.svg" alt="Sedans" />
+        <!-- Bilde for Sedans (ikonet) -->
+        <h3>Sedans</h3>
+        <!-- Overskrift for kortet -->
+        <p>
+          Choose a sedan for its affordability and excellent fuel economy. Ideal
+          for cruising in the city or on your next road trip.
+        </p>
+        <!-- Beskrivelse av Sedans -->
+        <button>Learn More</button>
+        <!-- Knapp som gir brukeren mulighet til å lære mer -->
+      </div>
+
+      <!-- SUVs Card -->
+      <div class="card suvs">
+        <!-- Spesifikt kort for "SUVs" med sin egen styling -->
+        <img src="img/icon-suvs.svg" alt="SUVs" />
+        <!-- Bilde for SUVs (ikonet) -->
+        <h3>SUVs</h3>
+        <!-- Overskrift for kortet -->
+        <p>
+          Take an SUV for its spacious interior, power, and versatility. Perfect
+          for your next family vacation and off-road adventures.
+        </p>
+        <!-- Beskrivelse av SUVs -->
+        <button>Learn More</button>
+        <!-- Knapp som gir brukeren mulighet til å lære mer -->
+      </div>
+
+      <!-- Luxury Card -->
+      <div class="card luxury">
+        <!-- Spesifikt kort for "Luxury" med sin egen styling -->
+        <img src="img/icon-luxury.svg" alt="Luxury" />
+        <!-- Bilde for Luxury (ikonet) -->
+        <h3>Luxury</h3>
+        <!-- Overskrift for kortet -->
+        <p>
+          Cruise in the best car brands without the bloated prices. Enjoy the
+          enhanced comfort of a luxury rental and drive in style.
+        </p>
+        <!-- Beskrivelse av Luxury -->
+        <button>Learn More</button>
+        <!-- Knapp som gir brukeren mulighet til å lære mer -->
+      </div>
+    </div>
+    <!-- Slutt på containeren -->
+  </body>
+  <!-- Slutt på body -->
 </html>
-
-

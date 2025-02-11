@@ -19,7 +19,7 @@
 }
 /* Styling for kortene */
 .card {
-    padding: 20px; /* Gir kortene innvendig avstand */
+    padding: 40px; /* Gir kortene innvendig avstand */
     text-align: center; /* Sentrerer innholdet horisontalt */
     border-radius: 0px; /* Runder hjørnene på kortene */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Legger til en svak skygge rundt kortene */
@@ -75,13 +75,14 @@
 }
 
 /* Justerer linjeavstand for å fylle mer plass i kortene */
-.card p {
+ p {
     color: var(--transparent-white);
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     line-height: 1.8; /* Øker linjehøyden for at teksten skal fylle mer plass */
     font-size: 15px; /* Holder font-størrelsen uendret */
+    font-family: "Lexend Deca", serif;
+    text-align: start;
 }
-
 /* Styling for knappene på kortene */
 .card button {
     background-color: white; /* Setter bakgrunnsfargen på knappen til hvit */
@@ -97,8 +98,10 @@
 
 /* Hover-effekt for knappene */
 .card button:hover {
-    background-color: hsl(0, 0%, 100%); /* Bakgrunnsfargen på knappen endres når du hover */
-    color: hsl(31, 77%, 52%); /* Tekstfargen endres på hover */
+    background-color: transparent; /* Bakgrunnsfargen på knappen endres når du hover */
+    color: hsl(0, 0%, 100%); /* Tekstfargen endres på hover */
+    border: solid 2px hsl(0, 0%, 100%);
+
 }
 
 /* Når skjermen er 768px eller mindre, vis 2 kolonner */
